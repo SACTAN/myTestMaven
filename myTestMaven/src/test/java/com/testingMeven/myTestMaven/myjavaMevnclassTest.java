@@ -8,6 +8,7 @@ public class myjavaMevnclassTest {
 	public void testjavam()
 	{
 		System.out.println("testing is best at all");
+		System.out.println("2nd commit");
 	}
 
 }
