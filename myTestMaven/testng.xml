@@ -5,6 +5,7 @@
     <classes>
       <class name="com.testingMeven.myTestMaven.App"/>
       <class name="com.testingMeven.myTestMaven.myjavaMevnclass"/>
+      <class name="com.testingMeven.myTestMaven.Webfirfoxtest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
