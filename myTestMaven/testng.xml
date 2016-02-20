@@ -3,8 +3,7 @@
 <suite name="Suite" parallel="none">
   <test name="Test">
     <classes>
-      <class name="com.testingMeven.myTestMaven.App"/>
-      <class name="com.testingMeven.myTestMaven.myjavaMevnclass"/>
+      <class name="com.testingMeven.myTestMaven.myjavaMevnclassTest"/>
       <class name="com.testingMeven.myTestMaven.Webfirfoxtest"/>
     </classes>
   </test> <!-- Test -->
