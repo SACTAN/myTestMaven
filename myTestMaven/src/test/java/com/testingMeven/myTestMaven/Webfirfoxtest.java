@@ -1,35 +1,28 @@
 package com.testingMeven.myTestMaven;
+import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class Webfirfoxtest {
+import com.testingMeven.myTestMavenMain.pages.GoogleFrontPage;
+
+public class WebfirfoxTest extends webDriverInit{
 	
-	public  WebDriver driver = null;
+	
+	//public  WebDriver driver = null;
 	String url = "https://www.google.co.in";
+	public GoogleFrontPage gfrntpage = new GoogleFrontPage();
 	
-	@BeforeTest
-	public void openBrowser()
-	{
-		driver = new FirefoxDriver();
-	}
 	
-	@Test
-	public void testTtile()
-	{
-		driver.get(url);
-	    driver.manage().window().maximize();
-	   String title =  driver.getTitle();
+	@Test(priority=0)
+	public void verifyTitle() throws InterruptedException
+	{		
+		getDriver().get(url);
+		getDriver().manage().window().maximize();
+		getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		gfrntpage.googleBox("AWS");
+		gfrntpage.googleSearch().click();
+	   String title =  getDriver().getTitle();
 	   System.out.println("title of the window ; " + title);
 	}
 	
-	@AfterTest
-	public void closeBrowser()
-	{
-		driver.close();
-	}
-
 }
