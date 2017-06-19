@@ -1,45 +1,46 @@
 package com.testingMeven.myTestMavenMain.pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WebDriver;
 
 import com.testingMeven.myTestMaven.webDriverInit;
 import com.testingMeven.myTestMavenMain.locators.GoogleLocators;
 
 public class GoogleFrontPage extends webDriverInit{
 	
-	private WebElement element = null;
 	
-	public void googleBox(String searchText) throws InterruptedException
+	public WebDriver googleBox(String searchText, WebDriver driver) throws InterruptedException
 	{
-		getDriver().findElement(By.xpath(GoogleLocators.searchBox)).sendKeys(searchText);;
+		driver.findElement(By.xpath(GoogleLocators.searchBox)).sendKeys(searchText);
+		return driver;
 		
 		}
 	
-	public WebElement googleSearch() throws InterruptedException
+	public WebDriver googleSearch(WebDriver driver) throws InterruptedException
 	{
-		element= getDriver().findElement(By.xpath(GoogleLocators.searchButton));
+		driver.findElement(By.xpath(GoogleLocators.searchButton)).click();
 		
-		return element;
+		return driver;
 		}
 	
-	public void searchFrom(String searchFrom) throws InterruptedException
+	public WebDriver searchFrom(String searchFrom, WebDriver driver) throws InterruptedException
 	{
-		getDriver().findElement(By.xpath(GoogleLocators.searchFAROM)).sendKeys(searchFrom);;
+		driver.findElement(By.xpath(GoogleLocators.searchFAROM)).sendKeys(searchFrom);
+		return driver;
+		}
+	
+	public WebDriver searchTo(String searchTo, WebDriver driver) throws InterruptedException
+	{
+		driver.findElement(By.xpath(GoogleLocators.searchTo)).sendKeys(searchTo);
+		return driver;
 		
 		}
 	
-	public void searchTo(String searchTo) throws InterruptedException
+	public WebDriver searchButtonMMT(WebDriver driver) throws InterruptedException
 	{
-		getDriver().findElement(By.xpath(GoogleLocators.searchTo)).sendKeys(searchTo);;
+		driver.findElement(By.xpath(GoogleLocators.searchButtonmmt)).click();
 		
-		}
-	
-	public WebElement searchButtonMMT() throws InterruptedException
-	{
-		element= getDriver().findElement(By.xpath(GoogleLocators.searchButtonmmt));
-		
-		return element;
+		return driver;
 		}
 	
 

@@ -19,8 +19,8 @@ public class WebfirfoxTest extends webDriverInit{
 		getDriver().get(url);
 		getDriver().manage().window().maximize();
 		getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		gfrntpage.googleBox("AWS");
-		gfrntpage.googleSearch().click();
+		gfrntpage.googleBox("AWS",getDriver());
+		gfrntpage.googleSearch(getDriver());
 	   String title =  getDriver().getTitle();
 	   System.out.println("title of the window ; " + title);
 	}

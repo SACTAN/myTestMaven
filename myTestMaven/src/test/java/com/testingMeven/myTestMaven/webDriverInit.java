@@ -7,6 +7,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
+import com.testingMeven.myTestMavenMain.utilities.Constants;
+import com.testingMeven.myTestMavenMain.utilities.ExcelUtils;
+
 
 public class webDriverInit {
 	public WebDriver driver;
@@ -16,11 +19,17 @@ public class webDriverInit {
 	}
 
 	@BeforeSuite
-	public void gettest() throws InterruptedException
+	public void gettest() throws Exception
 	{
-		System.setProperty("webdriver.gecko.driver", "F:\\New folder\\geckodriver.exe");
+		String directory = System.getProperty("user.dir");
+		System.out.println("path of directory : "+ directory);
+		System.setProperty("webdriver.gecko.driver", directory+"\\geckodriver.exe");
 		this.driver = new FirefoxDriver();
 		Thread.sleep(2000);
+		
+		//set data file path and sheet
+		//String directory = System.getProperty("user.dir");
+		ExcelUtils.setExcelFile(directory+Constants.Path_TestData + Constants.File_TestData,"TESTdata");
 	}
 	
 	public WebDriver getDriver() throws InterruptedException
