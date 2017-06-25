@@ -1,13 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+<suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.testingMeven.myTestMaven.myclass">
+      <class name="com.testingMeven.myTestMaven.WebfirfoxTest">
         <methods>
-          <include name="TestMyMaven"/>
+          <include name="closeBrowser"/>
+          <include name="verifyTitle"/>
+          <include name="gettest"/>
         </methods>
-      </class> <!-- com.testingMeven.myTestMaven.myclass -->
+      </class> <!-- com.testingMeven.myTestMaven.WebfirfoxTest -->
+      <class name="com.testingMeven.myTestMaven.AwsTestingClass">
+        <methods>
+          <include name="googleTest"/>
+          <include name="testMakemyrip"/>
+        </methods>
+      </class> <!-- com.testingMeven.myTestMaven.AwsTestingClass -->
+      <class name="com.testingMeven.myTestMaven.AppiumTest">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- com.testingMeven.myTestMaven.AppiumTest -->
+      <class name="com.testingMeven.myTestMaven.api_testing">
+        <methods>
+          <include name="testRestAP7"/>
+        </methods>
+      </class> <!-- com.testingMeven.myTestMaven.api_testing -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
