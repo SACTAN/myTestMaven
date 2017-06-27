@@ -23,16 +23,21 @@ public class AppiumTest {
 	  @BeforeTest
 	  public void beforeTest() throws MalformedURLException {
 		  
+		  String AppisPresent = "Yes";
+		  
+		  
+		  if(AppisPresent.equalsIgnoreCase("Yes")){
+		  
 		  //Appium for native App
-		 /* File app= new File ("Resource\\TheMallApp.apk");
+		  File app= new File ("Resource\\TheMallApp.apk");
 		  
 		  DesiredCapabilities cap= DesiredCapabilities.android();
 		  cap.setCapability("platformName", "Android");
 		  cap.setCapability("deviceName", "5PLFRCJVKVQG9SM7");
 		  cap.setCapability("platformVersion", "6.0");
 		  cap.setCapability("app", app.getAbsolutePath());
-		  */
-		  
+		  driver=new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
+		  }else{	  
 		  //Appium for web App
 		  DesiredCapabilities cap= DesiredCapabilities.android();
 		  //Version 46 campatible
@@ -43,8 +48,9 @@ public class AppiumTest {
 		  cap.setCapability("deviceName", "5PLFRCJVKVQG9SM7");
 		  //vikas moto device
 		 // cap.setCapability("deviceName", "ZY2237953H");
-		  
 		  driver=new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
+		  }	  
+		  
 		  
 		  driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 	  }
