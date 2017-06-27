@@ -58,13 +58,15 @@ public class AppiumTest {
 	  public void f() 
 		{
 			WebElement loginID=driver.findElement(By.id("com.demo.amanora:id/loginGold"));
+			takeScreenshot("lOGINbUTTON");
 //			 WebElement loginID=driver.findElement(By.name("Kedar Bindu (Gold)"));
 			loginID.click();
+			takeScreenshot("lOGINbUTTON");
 			WebElement subelement=driver.findElement(By.id("com.demo.amanora:id/OffersLayout"));
 			subelement.click();
 	  }
 	  
-	  @Test
+	 // @Test
 	  public void mobileApp() throws InterruptedException
 	  {			   
 		    driver.get("http://www.facebook.com");
