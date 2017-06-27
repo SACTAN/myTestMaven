@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="49185" started-at="2016-02-14T08:32:55Z" finished-at="2016-02-14T08:33:44Z">
+  <suite name="Suite" duration-ms="50084" started-at="2017-06-24T10:06:03Z" finished-at="2017-06-24T10:06:53Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="49185" started-at="2016-02-14T08:32:55Z" finished-at="2016-02-14T08:33:44Z">
-      <class name="com.testingMeven.myTestMaven.myclass">
-        <test-method status="PASS" signature="TestMyMaven()[pri:0, instance:com.testingMeven.myTestMaven.myclass@737a8712]" name="TestMyMaven" duration-ms="18105" started-at="2016-02-14T14:03:26Z" finished-at="2016-02-14T14:03:44Z">
+    <test name="Test" duration-ms="50084" started-at="2017-06-24T10:06:03Z" finished-at="2017-06-24T10:06:53Z">
+      <class name="com.testingMeven.myTestMaven.AppiumTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.testingMeven.myTestMaven.AppiumTest@3b6eb2ec]" name="beforeTest" is-config="true" duration-ms="20371" started-at="2017-06-24T15:36:03Z" finished-at="2017-06-24T15:36:23Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestMyMaven -->
-      </class> <!-- com.testingMeven.myTestMaven.myclass -->
-      <class name="com.testingMeven.myTestMaven.App">
-        <test-method status="PASS" signature="testjava()[pri:0, instance:com.testingMeven.myTestMaven.App@d8c42e0]" name="testjava" duration-ms="0" started-at="2016-02-14T14:03:26Z" finished-at="2016-02-14T14:03:26Z">
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="mobileApp()[pri:0, instance:com.testingMeven.myTestMaven.AppiumTest@3b6eb2ec]" name="mobileApp" duration-ms="22367" started-at="2017-06-24T15:36:23Z" finished-at="2017-06-24T15:36:46Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testjava -->
-      </class> <!-- com.testingMeven.myTestMaven.App -->
-      <class name="com.testingMeven.myTestMaven.tetMevan">
-        <test-method status="PASS" signature="testtwo()[pri:0, instance:com.testingMeven.myTestMaven.tetMevan@1e2db6ea]" name="testtwo" duration-ms="30970" started-at="2016-02-14T14:02:55Z" finished-at="2016-02-14T14:03:26Z">
+        </test-method> <!-- mobileApp -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.testingMeven.myTestMaven.AppiumTest@3b6eb2ec]" name="afterTest" is-config="true" duration-ms="7334" started-at="2017-06-24T15:36:46Z" finished-at="2017-06-24T15:36:53Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testtwo -->
-      </class> <!-- com.testingMeven.myTestMaven.tetMevan -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.testingMeven.myTestMaven.AppiumTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
