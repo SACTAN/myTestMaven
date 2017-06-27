@@ -54,7 +54,7 @@ public class AppiumTest {
 		  
 		  driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 	  }
-	 // @Test
+	  @Test
 	  public void f() 
 		{
 			WebElement loginID=driver.findElement(By.id("com.demo.amanora:id/loginGold"));
